@@ -22,3 +22,4 @@ module SessionsHelper
     redirect_to sign_in_path if @current_user.blank?
   end
  end
+ 
