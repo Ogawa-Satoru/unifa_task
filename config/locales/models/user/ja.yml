@@ -1,0 +1,7 @@
+ja:
+  errors:
+    user:
+      blank:
+        user_id: "ユーザーIDを入力してください"
+        password: "パスワードを入力してください"
+      record_not_found: "正しいIDとパスワードを入力してください"
