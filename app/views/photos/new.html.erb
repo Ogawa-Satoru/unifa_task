@@ -1,0 +1,21 @@
+<%= render 'photos/header' %>
+
+<%= form_with model: @photo, local: true  do |f| %>
+<% if @photo.errors.any? %>
+  <div class="alert alert-danger">
+    <ul class="mb-0">
+      <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <%= f.label :title, "タイトル"%>
+  <%= f.text_area :title %><br>
+  <%= f.label :image, "画像ファイル"%>
+  <%= f.file_field :image %><br>
+  <%= f.submit 'アップロード' %>
+<% end %>
+
+<%= link_to "キャンセル", photos_path %>
