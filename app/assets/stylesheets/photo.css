@@ -1,0 +1,18 @@
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  text-align: center;
+  width: 500px;
+}
+
+.image {
+  width: 500px;
+  height: 300px;
+}
+
+.photo-block {
+  width: 550px;
+}

@@ -4,6 +4,8 @@ class User < ApplicationRecord
   # 8桁以上 && 大小英数字および記号を含む
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)(?=.*?[\W_])[!-~]{8,}+\z/
 
+  has_many :photos
+
   validates :user_id, presence: true, uniqueness: true
   validates :password, format: { with: VALID_PASSWORD_REGEX }, on: :create
   validates :password_confirmation, presence: true, on: :create
