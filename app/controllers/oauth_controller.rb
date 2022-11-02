@@ -12,7 +12,7 @@ class OauthController < ApplicationController
   end
 
   def callback
-    uri = URI.parse(tweet_app_settings[:get_access_toke_uri])
+    uri = URI.parse(tweet_app_settings[:get_access_token_uri])
     code = params[:code]
 
     params = {
