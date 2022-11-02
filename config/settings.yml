@@ -1,0 +1,6 @@
+development:
+  tweet_app:
+    redirect_uri: "http://localhost:3000/oauth/callback"
+    authorization_uri: "https://arcane-ravine-29792.herokuapp.com/oauth/authorize"
+    get_access_toke_uri: "https://arcane-ravine-29792.herokuapp.com/oauth/token"
+    post_tweet_uri: "https://arcane-ravine-29792.herokuapp.com/api/tweets"
