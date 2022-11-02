@@ -1,7 +1,4 @@
 class TweetsController < ApplicationController
-  require 'net/http'
-  require 'json'
-
   def create
     photo = Photo.find(params[:photo])
     uri = URI.parse(tweet_app_settings[:post_tweet_uri])

@@ -1,6 +1,4 @@
 class OauthController < ApplicationController
-  require 'net/http'
-
   def create
     uri = URI(tweet_app_settings[:authorization_uri])
 
