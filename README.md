@@ -37,3 +37,8 @@ TWEET_APP_CLIENT_SECRET="メールで共有頂いたclient_secret"
 ```
 rails s
 ```
+
+##### 下記URLにアクセスしログイン画面が表示されたら、事前に作成したユーザーのID,PASSWORDを入力
+```
+localhost:3000
+```
