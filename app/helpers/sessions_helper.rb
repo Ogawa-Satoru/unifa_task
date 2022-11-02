@@ -14,6 +14,7 @@ module SessionsHelper
   def sign_out
     @current_user = nil
     cookies.delete(:user_remember_token)
+    reset_session
   end
 
   private
@@ -22,4 +23,3 @@ module SessionsHelper
     redirect_to sign_in_path if @current_user.blank?
   end
  end
- 

@@ -1,18 +1,19 @@
-.photo {
+.photo-list {
   display: flex;
   flex-wrap: wrap;
 }
 
+.photo {
+  text-align: center;
+  width: 550px;
+  padding: 10px;
+}
+
 .title {
   text-align: center;
-  width: 500px;
 }
 
 .image {
   width: 500px;
   height: 300px;
-}
-
-.photo-block {
-  width: 550px;
 }

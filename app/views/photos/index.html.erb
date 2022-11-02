@@ -2,17 +2,21 @@
 
 <h1>写真一覧</h1>
 
+<%= button_to "MYTweetAppと連携", oauth_index_path,　method: :post %>
 <%= link_to "ファイルをアップロードする", new_photo_path %>
 
 <% if @photos.present? %>
-  <div class="photo">
+  <div class="photo-list">
     <% @photos.each do |photo| %>
-      <div class="photo-block">
+      <div class="photo">
         <div class=title >
           <%= photo.title %>
         </div>
         <% if photo.image.attached? %>
           <%= image_tag photo.image, class:'image' %>
+        <% end %>
+        <% if session[:access_token].present? %>
+          <%= button_to "ツイートする", tweets_path(photo: photo) %>
         <% end %>
       </div>
     <% end %>
